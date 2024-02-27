@@ -1,76 +1,50 @@
+:root {
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+
+    /* defaults for light mode */
+    --text: var(--base00);
+    --textHL: var(--base01);
+    --textLL: var(--base1);
+    --background: var(--base3);
+    --backgroundHL: var(--base2);
+}
+
+/* resetting vars for dark */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: var(--base0);
+        --textHL: var(--base1);
+        --textLL: var(--base01);
+        --background: var(--base03);
+        --backgroundHL: var(--base02);
+    }
+}
+
+/* TO DO, MAKE DEFAULT MAPPING USING THE VARS */
 html {
     font-family: Verdana, Arial, sans-serif;
-    background-color: rgb(238 232 213);
-    color: rgb(101 123 131)
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: rgb(88 110 117);
-}
-
-.background {
-    background-color: rgb(253 246 227);
-    margin: auto;
-    width: 50%;
-}
-
-a {
-    color: rgb(38 139 210);
-}
-
-a:visited {
-    color: rgb(108 113 196);
-}
-
-a:hover {
-    color: rgb(42 161 152)
-}
-
-.links,
-.content {
-    margin: auto;
-    width: 90%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.centered {
-    text-align: center;
-}
-
-img {
-    height: 340px;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--base3);
+    color: var(--base00);
 }
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: rgb(7 54 66);
-        color: rgb(131 148 150)
-    }
-
-    .background {
-        background-color: rgb(0 43 54);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: rgb(147 161 161)
+        background-color: var(--base03);
+        color: var(--base0);
     }
 }
